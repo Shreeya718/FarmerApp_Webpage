@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('#userType').change(function() {
+                const userType = $(this).val();
+                alert('You selected ' + userType + '!');
+            });
+        });
+    </script>
+    
+</head>
+<body>
+    <div class="container my-5">
+        <h2>Register as Farmer or Consumer</h2>
+        <form>
+            <div class="mb-3">
+                <label for="userType" class="form-label">Register as</label>
+                <select id="userType" class="form-select">
+                    <option value="farmer">Farmer</option>
+                    <option value="consumer">Consumer</option>
+                </select>
+            </div>
+            <div class="mb-3">
+                <label for="email" class="form-label">Email</label>
+                <input type="email" class="form-control" id="email" placeholder="Enter your email">
+            </div>
+            <div class="mb-3">
+                <label for="password" class="form-label">Password</label>
+                <input required type="password" class="form-control" id="password" placeholder="Enter your password">
+            </div>
+            <button type="submit" class="btn btn-success">Register</button>
+        </form>
+    </div>
+</body>
+</html>
